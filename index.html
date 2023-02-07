@@ -5,25 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/style.css">
-    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Weather Forecast App</title>
 </head>
 <body>
-    <header>Weather Dashboard</header>
-    <section id="side-bar">
-        <p>Search For a City:</p>
-        <input type="text" >
+    <section class="wrap">
+        <section class="sidebar">
+            <div>
+                <form action="" class="search" id="search">
+                    <input type="text" id="query" placeholder="Richmond"/>
+                    <button type="button" id="search-bar">Search                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <section class="weather-icon">
+                    <img id="currentWeatherIcon" src="" alt="depiction of current weather state">
+                </section>
+            </div>
+            <section class="temperature"></section>
+        </section>
     </section>
-
-
-    <section id="current-weather">
-        <h1 id="city">CITY NAME</h1>
-        <p id="temp">Temp: </p>
-        <p id="wind">Wind: </p>
-        <p id="humidity">Humidity: </p>
-    </section>
-
-    <section id="five-day forecast">
+    <section id="cityWeather">
+        <h1 id="city-name"></h1>
+        <h1 id="current-day"></h1>
 
     </section>
+    <script src="Assets/script.js"></script>
 </body>
 </html>
