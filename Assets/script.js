@@ -66,14 +66,15 @@ fetch(queryURL)
     }}) 
     })}
 
-function historyStorage () {
-    searchHistory.innerHTML = ""
-    for (let i = 0; i < searchHistory.length; i++) {
-        clearButton.addEventListener("click", function (event){
-            event.preventDefault();
-            
+        button.addEventListener("click", function () {
+            localStorage.setItem(cityInput.value, cityName.value);
+            for (let i = 0; i < localStorage.length; i++) {
+                let pHistory = document.createElement("p");
+                pHistory.textContent = localStorage.key(i);
+                searchHistory.appendChild(pHistory);
+                console.log(localStorage.key(i));
+            }
         })
-    }
-}
-
-button.addEventListener('click', weatherCast);
+        clearButton.addEventListener("click", function (){
+            searchHistory.innerHTML = "";
+        });
